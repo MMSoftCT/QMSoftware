@@ -6,10 +6,23 @@
 package qmsoftware;
 
 /**
- *
+ * class for lecturer
+ * contains personal attributes and ratings
+ * 
  * @author amederake
  */
 public class Dozenten
 {
+    // class variables
     
+    private String Name;            // lectures name
+    private String[] Modules;       // Array of Modules
+    private Bewertung[] ratings;    // Array of ratings
+
+
+    // Construters
+
+    Dozenten(){
+        Name = "";
+    }
 }
