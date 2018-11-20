@@ -20,72 +20,23 @@ public class QMSoftware extends javax.swing.JPanel
 
     private void initComponents() 
     {
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
-        jCheckBoxMenuItem1 = new javax.swing.JCheckBoxMenuItem();
-        jCheckBoxMenuItem2 = new javax.swing.JCheckBoxMenuItem();
-        jLabel9 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        jList2 = new javax.swing.JList<>();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        choice1 = new java.awt.Choice();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        choice2 = new java.awt.Choice();
-        jButton1 = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        jLabel1 = new javax.swing.JLabel();                         // Überschrift
+        jLabel2 = new javax.swing.JLabel();                         // Label "Dozent"
+        choice1 = new java.awt.Choice();                            // Auswahl von Dozenten
+        jLabel3 = new javax.swing.JLabel();                         // Label "Note Durchschnitt"
+        jLabel4 = new javax.swing.JLabel();                         // Ergebnis Note Durchschnitt
+        jLabel5 = new javax.swing.JLabel();                         // Label "Modul"
+        choice2 = new java.awt.Choice();                            // Auswahl von Modulen
+        jButton1 = new javax.swing.JButton();                       // Auswertung starten nach Eingabe von Dozent und Modul
+        jLabel6 = new javax.swing.JLabel();                         // Label "Note 5 oder 6"
+        jLabel7 = new javax.swing.JLabel();                         // Ergebnis aus Note 5 oder 6
+        jLabel8 = new javax.swing.JLabel();                         // Ergebnis ob Dozent geprüft werden muss
+        jScrollPane3 = new javax.swing.JScrollPane();               
+        jTable2 = new javax.swing.JTable();                         // Tabelle der Fragen über Dozenten
         jScrollPane5 = new javax.swing.JScrollPane();
-        jTable3 = new javax.swing.JTable();
+        jTable3 = new javax.swing.JTable();                         // Ergebnisnoten aus den Fragen
 
-        jList1.setModel(new javax.swing.AbstractListModel<String>() 
-        {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
         
-        jScrollPane1.setViewportView(jList1);
-
-        jCheckBoxMenuItem1.setSelected(true);
-        jCheckBoxMenuItem1.setText("jCheckBoxMenuItem1");
-
-        jCheckBoxMenuItem2.setSelected(true);
-        jCheckBoxMenuItem2.setText("jCheckBoxMenuItem2");
-
-        jLabel9.setText("jLabel9");
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] 
-            {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] 
-            {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }));
-        
-        jScrollPane2.setViewportView(jTable1);
-
-        jList2.setModel(new javax.swing.AbstractListModel<String>() 
-        {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        
-        jScrollPane4.setViewportView(jList2);
-
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 18)); 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("QM-Auswertung");
@@ -236,8 +187,6 @@ public class QMSoftware extends javax.swing.JPanel
     private java.awt.Choice choice1;
     private java.awt.Choice choice2;
     private javax.swing.JButton jButton1;
-    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
-    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -245,16 +194,9 @@ public class QMSoftware extends javax.swing.JPanel
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JList<String> jList1;
-    private javax.swing.JList<String> jList2;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel jLabel8;   
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
     
@@ -268,7 +210,7 @@ public class QMSoftware extends javax.swing.JPanel
         grundgerüst.add(new QMSoftware());
                
         grundgerüst.pack(); //grundgerüst.setSize(600,400); //button1.setBounds(10, 10, 100, 50);
-        
+        grundgerüst.setLocationRelativeTo(null); // zentriert das Fenster
         grundgerüst.setVisible(true); //Fenster wird sichtbar
         grundgerüst.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //Anwendung wird beim Schliesen des Fensters beendet
     } 
