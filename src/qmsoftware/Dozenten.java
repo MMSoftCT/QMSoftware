@@ -51,4 +51,20 @@ public class Dozenten
     public double avgFKompetenz(String mod){
         return 0.0;
     }
+    
+    public double avgPKompetenz(String mod){
+        return 0.0;
+    }
+    
+    public double avgVerstaendlich(String mod){
+        return 0.0;
+    }
+    
+    public double avgVorbereitet(String mod){
+        return 0.0;
+    }
+    
+    public double avgProblem(String mod){
+        return 0.0;
+    }
 }
