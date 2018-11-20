@@ -264,7 +264,7 @@ public class QMSoftware extends javax.swing.JPanel
     
     public static void main(String[] args) 
     {
-        JFrame grundgerüst = new JFrame("Fenster mit Grid Layout");
+        JFrame grundgerüst = new JFrame("QM Auswertung");
         grundgerüst.add(new QMSoftware());
                
         grundgerüst.pack(); //grundgerüst.setSize(600,400); //button1.setBounds(10, 10, 100, 50);
