@@ -6,12 +6,13 @@
 package qmsoftware;
 
 /**
- * Class for lecturer ratings contains one dataset from input
+ * Class for lecturer ratings, contains one dataset from input
  *
  * @author amederake
  */
 public class Bewertung
 {
+
     // Class Variables
     private String Modul;           // Modulename
     private int FKompetenz;         // fachliche Kompetenz
@@ -32,18 +33,19 @@ public class Bewertung
         Vorbereitet = 0;
         Problem = 0;
     }
-    
+
     /**
      * parameterised constructor
-     * 
-     * @param m     // Modulname
-     * @param fk    // Fachkompetenz
-     * @param pk    // pädagogische Kompetenz
-     * @param ve    // Verständlichkeit
-     * @param vo    // Vorbereitung
-     * @param p     // Problembehandlung
+     *
+     * @param m // Modulname
+     * @param fk // Fachkompetenz
+     * @param pk // pädagogische Kompetenz
+     * @param ve // Verständlichkeit
+     * @param vo // Vorbereitung
+     * @param p // Problembehandlung
      */
-    Bewertung(String m,int fk,int pk, int ve, int vo,int p){
+    Bewertung(String m, int fk, int pk, int ve, int vo, int p)
+    {
         Modul = m;
         FKompetenz = fk;
         PKompetenz = pk;
@@ -51,113 +53,126 @@ public class Bewertung
         Vorbereitet = vo;
         Problem = p;
     }
-    
+
     // class methodes
     
     /**
      * retuns modulname
-     * 
+     *
      * @return String
      */
-    public String getModul(){
+    public String getModul()
+    {
         return Modul;
     }
-    
+
     /**
      * set Modulname
-     * 
+     *
      * @param mod String
      */
-    public void setModul(String mod){
+    public void setModul(String mod)
+    {
         Modul = mod;
     }
-    
+
     /**
      * retuns FKompetenz rating
-     * 
-     * @return 
+     *
+     * @return
      */
-    public int getFKompetenz(){
+    public int getFKompetenz()
+    {
         return FKompetenz;
     }
-    
+
     /**
      * set FKompeteznz rating
-     * 
-     * @param in  int
+     *
+     * @param in int
      */
-    public void setFKompetenz(int in){
+    public void setFKompetenz(int in)
+    {
         FKompetenz = in;
     }
-    
+
     /**
      * returns PKompetenz rating
-     * 
+     *
      * @return int
      */
-    public int getPKompetenz(){
+    public int getPKompetenz()
+    {
         return PKompetenz;
     }
-    
+
     /**
      * set PKompetenz rating
-     * 
+     *
      * @param in int
      */
-    public void setPKompetenz(int in){
+    public void setPKompetenz(int in)
+    {
         PKompetenz = in;
     }
-    
+
     /**
      * returns Verstaendlich rating
-     * 
+     *
      * @return int
      */
-    public int getVerstaendlich(){
+    public int getVerstaendlich()
+    {
         return Verstaendlich;
     }
-    
+
     /**
      * set Verstaendlich rating
-     * 
+     *
      * @param in int
      */
-    public void setVerstaendlich(int in){
+    public void setVerstaendlich(int in)
+    {
         Verstaendlich = in;
     }
-    
+
     /**
      * returns Vorbereitung rating
-     * 
-     * @return  int
+     *
+     * @return int
      */
-    public int getVorbereitet(){
+    public int getVorbereitet()
+    {
         return Vorbereitet;
     }
-    
+
     /**
      * set Vorbereitet rating
-     * 
+     *
      * @param in int
      */
-    public void setVorbereitet(int in){
+    public void setVorbereitet(int in)
+    {
         Vorbereitet = in;
     }
+
     /**
      * returns Problem rating
-     * 
-     * @return 
+     *
+     * @return
      */
-    public int getProblem(){
+    public int getProblem()
+    {
         return Problem;
     }
-    
+
     /**
      * set Problem rating
-     * 
-     * @param in  int
+     *
+     * @param in int
      */
-    public void setProblem(int in){
+    public void setProblem(int in)
+    {
         Problem = in;
     }
 }
