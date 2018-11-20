@@ -24,7 +24,7 @@ public class Bewertung
     /**
      * standard constructor
      */
-    Bewertung()
+    public Bewertung()
     {
         Modul = "";
         FKompetenz = 0;
@@ -44,7 +44,7 @@ public class Bewertung
      * @param vo // Vorbereitung
      * @param p // Problembehandlung
      */
-    Bewertung(String m, int fk, int pk, int ve, int vo, int p)
+    public Bewertung(String m, int fk, int pk, int ve, int vo, int p)
     {
         Modul = m;
         FKompetenz = fk;
