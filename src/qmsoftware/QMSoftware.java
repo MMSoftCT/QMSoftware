@@ -10,7 +10,9 @@ import java.awt.event.ItemListener;
 import java.util.ArrayList;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.event.TableModelEvent;
+import javax.swing.table.DefaultTableCellRenderer;
 
 /**
  *
@@ -35,6 +37,7 @@ public class QMSoftware extends javax.swing.JPanel
     private javax.swing.JLabel txtPruefen;          // Ergebnis ob Dozent geprüft werden muss
     private javax.swing.JLabel txtTitel;            // Überschrift
 
+    private DefaultTableCellRenderer cellNote;        // Renderer for 2nd table column
     private DozArray doz;                           // ArrayList of teacher
     private ArrayList<String> dozList;              // Array for cobDoz
     private StringArray modList;                    // Array for cobMod
@@ -44,6 +47,8 @@ public class QMSoftware extends javax.swing.JPanel
         doz = new DozArray();
         dozList = new ArrayList<String>();
         modList = new StringArray();
+        cellNote = new DefaultTableCellRenderer();
+        cellNote.setHorizontalAlignment(JLabel.RIGHT);
         String[] mod;
 
         // load data and fill objects
@@ -156,6 +161,9 @@ public class QMSoftware extends javax.swing.JPanel
                 return canEdit[columnIndex];
             }
         });
+        tblWertung.getColumnModel().getColumn(0).setPreferredWidth(200);
+        tblWertung.getColumnModel().getColumn(1).setPreferredWidth(50);
+        tblWertung.getColumnModel().getColumn(1).setCellRenderer(cellNote);
         tblWertung.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
         spTable.setViewportView(tblWertung);
 
@@ -388,6 +396,7 @@ public class QMSoftware extends javax.swing.JPanel
 
         grundgerüst.pack(); //grundgerüst.setSize(600,400); //button1.setBounds(10, 10, 100, 50);
         grundgerüst.setLocationRelativeTo(null); // zentriert das Fenster
+        grundgerüst.setResizable(false);
         grundgerüst.setVisible(true); //Fenster wird sichtbar
         grundgerüst.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //Anwendung wird beim Schliesen des Fensters beendet
     }
