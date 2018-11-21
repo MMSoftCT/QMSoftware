@@ -8,7 +8,7 @@ package qmsoftware;
 import java.util.ArrayList;
 
 /**
- *specialized ArrayList for String
+ * specialized ArrayList for String
  * @author micim
  */
 public class StringArray extends ArrayList<String>
