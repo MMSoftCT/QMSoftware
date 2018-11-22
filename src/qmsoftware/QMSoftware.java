@@ -117,35 +117,27 @@ public class QMSoftware extends javax.swing.JPanel
         txtPruefen.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txtPruefen.setText("Dozent muss/muss nicht geprüft werden!");
 
+        tblWertung.setAutoCreateRowSorter(true);
         tblWertung.setModel(new javax.swing.table.DefaultTableModel(
                 new Object[][]
                 {
-                    {
-                        "Fachliche Kompetenz", null
-                    },
-                    {
-                        "Pädagogische Kompetenz", null
-                    },
-                    {
-                        "Lernstoff Vermittlung", null
-                    },
-                    {
-                        "Unterrichtsvorbereitung", null
-                    },
-                    {
-                        "Hilfsbereitschaft", null
-                    }
-                },
-                new String[]
-                {
-                    "Kriterium", "Note Ø"
-                }
+                { new Integer(1), "Fachliche Kompetenz", null},
+                { new Integer(2), "Pädagogische Kompetenz", null},
+                { new Integer(3), "Lernstoff Vermittlung", null},
+                { new Integer(4), "Unterrichtsvorbereitung", null},
+                { new Integer(5), "Hilfsbereitschaft", null}
+            },
+            new String []
+            {
+                "Nr.", "Kriterium", "Note Ø"
+            }
         )
         {
             Class[] types = new Class[]
             {
-                java.lang.String.class, java.lang.String.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class
             };
+            
             boolean[] canEdit = new boolean[]
             {
                 false, false
@@ -162,9 +154,10 @@ public class QMSoftware extends javax.swing.JPanel
             }
         });
         tblWertung.getTableHeader().setFont(new java.awt.Font("Dialog", 1, 12));
-        tblWertung.getColumnModel().getColumn(0).setPreferredWidth(200);
-        tblWertung.getColumnModel().getColumn(1).setPreferredWidth(50);
-        tblWertung.getColumnModel().getColumn(1).setCellRenderer(cellNote);
+        tblWertung.getColumnModel().getColumn(0).setPreferredWidth(25);
+        tblWertung.getColumnModel().getColumn(1).setPreferredWidth(200);
+        tblWertung.getColumnModel().getColumn(2).setPreferredWidth(50);
+        tblWertung.getColumnModel().getColumn(2).setCellRenderer(cellNote);
         tblWertung.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
         spTable.setViewportView(tblWertung);
 
@@ -386,15 +379,15 @@ public class QMSoftware extends javax.swing.JPanel
         }
 
         // update table
-        tblWertung.setValueAt(String.valueOf(avgFK), 0, 1);
+        tblWertung.setValueAt(String.valueOf(avgFK), 0, 2);
         tblWertung.tableChanged(new TableModelEvent(tblWertung.getModel(), 0));
-        tblWertung.setValueAt(String.valueOf(avgPK), 1, 1);
+        tblWertung.setValueAt(String.valueOf(avgPK), 1, 2);
         tblWertung.tableChanged(new TableModelEvent(tblWertung.getModel(), 1));
-        tblWertung.setValueAt(String.valueOf(avgVE), 2, 1);
+        tblWertung.setValueAt(String.valueOf(avgVE), 2, 2);
         tblWertung.tableChanged(new TableModelEvent(tblWertung.getModel(), 2));
-        tblWertung.setValueAt(String.valueOf(avgV), 3, 1);
+        tblWertung.setValueAt(String.valueOf(avgV), 3, 2);
         tblWertung.tableChanged(new TableModelEvent(tblWertung.getModel(), 3));
-        tblWertung.setValueAt(String.valueOf(avgP), 4, 1);
+        tblWertung.setValueAt(String.valueOf(avgP), 4, 2);
         tblWertung.tableChanged(new TableModelEvent(tblWertung.getModel(), 4));
     }
 
