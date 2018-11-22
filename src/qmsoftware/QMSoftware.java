@@ -37,7 +37,7 @@ public class QMSoftware extends javax.swing.JPanel
     private javax.swing.JLabel txtPruefen;          // Ergebnis ob Dozent geprüft werden muss
     private javax.swing.JLabel txtTitel;            // Überschrift
 
-    private DefaultTableCellRenderer cellNote;      // Renderer for 2nd table column
+    private DefaultTableCellRenderer cellNote;      // Renderer for 3rd table column
     private DozArray doz;                           // ArrayList of teacher
     private ArrayList<String> dozList;              // Array for cobDoz
     private StringArray modList;                    // Array for cobMod
