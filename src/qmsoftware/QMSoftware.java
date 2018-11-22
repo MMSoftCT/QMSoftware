@@ -37,7 +37,7 @@ public class QMSoftware extends javax.swing.JPanel
     private javax.swing.JLabel txtPruefen;          // Ergebnis ob Dozent geprüft werden muss
     private javax.swing.JLabel txtTitel;            // Überschrift
 
-    private DefaultTableCellRenderer cellNote;        // Renderer for 2nd table column
+    private DefaultTableCellRenderer cellNote;      // Renderer for 2nd table column
     private DozArray doz;                           // ArrayList of teacher
     private ArrayList<String> dozList;              // Array for cobDoz
     private StringArray modList;                    // Array for cobMod
@@ -161,6 +161,7 @@ public class QMSoftware extends javax.swing.JPanel
                 return canEdit[columnIndex];
             }
         });
+        tblWertung.getTableHeader().setFont(new java.awt.Font("Dialog", 1, 12));
         tblWertung.getColumnModel().getColumn(0).setPreferredWidth(200);
         tblWertung.getColumnModel().getColumn(1).setPreferredWidth(50);
         tblWertung.getColumnModel().getColumn(1).setCellRenderer(cellNote);
@@ -212,7 +213,7 @@ public class QMSoftware extends javax.swing.JPanel
         lblBewertungen.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         lblBewertungen.setText("Bewertungen");
 
-        txtBewertungen.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtBewertungen.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         txtBewertungen.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txtBewertungen.setText("20");
 
@@ -372,6 +373,17 @@ public class QMSoftware extends javax.swing.JPanel
         txtBewertungen.setText(String.valueOf(ratCount));
         txtNote.setText(String.valueOf(ratAvg));
         txtNote5_6.setText(String.valueOf(badCount));
+
+        if(badCount > 0)
+        {
+            txtPruefen.setText("Dozent muss überprüft werden !");
+            txtPruefen.setForeground(new java.awt.Color(255, 0, 0));
+        }
+        else
+        {
+            txtPruefen.setText("Dozent muss nicht überprüft werden.");
+            txtPruefen.setForeground(new java.awt.Color(0, 0, 0));
+        }
 
         // update table
         tblWertung.setValueAt(String.valueOf(avgFK), 0, 1);
