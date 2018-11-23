@@ -127,6 +127,8 @@ public class QMSoftware extends javax.swing.JPanel
         txtBewertungen = new javax.swing.JLabel();
         btnDlgOpen = new javax.swing.JButton();
 
+        // Overview dialog objects
+        
         dlgOverview.setTitle("Bewertungen");
         dlgOverview.setMinimumSize(new java.awt.Dimension(700, 360));
         dlgOverview.setModalityType(java.awt.Dialog.ModalityType.APPLICATION_MODAL);
@@ -240,6 +242,8 @@ public class QMSoftware extends javax.swing.JPanel
                 .addComponent(btnClose))
         );
 
+        // Main window objects
+        
         txtTitel.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         txtTitel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txtTitel.setText("QM-Auswertung");
@@ -434,11 +438,21 @@ public class QMSoftware extends javax.swing.JPanel
                 .addContainerGap(12, Short.MAX_VALUE))
         );
     }
+    
+    // Action methodes
+    /**
+     * close the overview dialog
+     * @param evt 
+     */
     private void btnCloseActionPerformed(java.awt.event.ActionEvent evt)                                         
     {                                             
         dlgOverview.setVisible(false);
     }                                        
 
+    /**
+     * open the overview dialog
+     * @param evt 
+     */
     private void btnDlgOpenActionPerformed(java.awt.event.ActionEvent evt)                                           
     {                                               
         
