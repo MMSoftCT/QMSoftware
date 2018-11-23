@@ -98,6 +98,24 @@ public class Dozent
     }
     
     /**
+     * return a list of ratings who matches the given modul
+     * @param mod   String
+     * @return      ArrayList<Bewertung>
+     */
+    public ArrayList<Bewertung> getBewertung(String mod)
+    {
+        ArrayList<Bewertung> b = new ArrayList<Bewertung>();
+        for(int i = 0; i < ratings.size(); i++)
+        {
+            if (ratings.get(i).getModul().equals(mod))
+            {
+                b.add(ratings.get(i));
+            }
+        }
+        return b;
+    }
+    
+    /**
      * return how much studends have rated
      * @param mod   String
      * @return int
