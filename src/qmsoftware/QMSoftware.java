@@ -545,7 +545,7 @@ public class QMSoftware extends javax.swing.JPanel
 
         // update text output
         txtBewertungen.setText(String.valueOf(ratCount));
-        txtNote.setText(String.valueOf(ratAvg));
+        txtNote.setText(String.format("%1.2f", ratAvg));
         txtNote5_6.setText(String.valueOf(badCount));
 
         if(badCount > 0)
