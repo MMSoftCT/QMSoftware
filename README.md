@@ -7,6 +7,6 @@ Teamleitung Andrea Michelle Mederake
 
 Team member :
 
-Maxim Meser
+Maxim Meser (GUI)
 
 Tim Andreas Leutfeld
